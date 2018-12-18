@@ -32,7 +32,8 @@ public class GreetingsTest {
         Assert.assertEquals(7l, greetings.getLuckyNumber());
     }
 
-    @Test void getMessageAndGetLuckNumber() {
+    @Test
+    public void getMessageAndGetLuckNumber() {
         when(greetings.getMessage()).thenReturn("Hello");
         when(greetings.getLuckyNumber()).thenReturn(7l);
         Assert.assertEquals(greetings.getMessage(), "Hello");
