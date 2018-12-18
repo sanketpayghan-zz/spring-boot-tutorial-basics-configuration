@@ -39,4 +39,13 @@ public class GreetingsTest {
         Assert.assertEquals(greetings.getMessage(), "Hello");
         Assert.assertEquals(greetings.getLuckyNumber(), 7l);
     }
+
+
+    @Test
+    public void getMessageAndGetLuckNumberFailure() {
+        when(greetings.getMessage()).thenReturn("Hello");
+        when(greetings.getLuckyNumber()).thenReturn(7l);
+        Assert.assertNotEquals("Hello Sanket", greetings.getMessage());
+        Assert.assertNotEquals(9l, greetings.getLuckyNumber());
+    }
 }
