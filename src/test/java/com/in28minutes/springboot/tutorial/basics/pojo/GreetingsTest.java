@@ -19,10 +19,10 @@ public class GreetingsTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
     }
-    
+
     @Test
     public void getMessage() {
         when(greetings.getMessage()).thenReturn("Hello Sanket");
-        Assert.assertEquals("Hello", greetings.getMessage());
+        Assert.assertEquals("Hello Sanket", greetings.getMessage());
     }
 }
