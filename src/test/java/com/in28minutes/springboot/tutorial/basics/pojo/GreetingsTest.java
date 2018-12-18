@@ -31,4 +31,11 @@ public class GreetingsTest {
         when(greetings.getLuckyNumber()).thenReturn(7l);
         Assert.assertEquals(7l, greetings.getLuckyNumber());
     }
+
+    @Test void getMessageAndGetLuckNumber() {
+        when(greetings.getMessage()).thenReturn("Hello");
+        when(greetings.getLuckyNumber()).thenReturn(7l);
+        Assert.assertEquals(greetings.getMessage(), "Hello");
+        Assert.assertEquals(greetings.getLuckyNumber(), 7l);
+    }
 }
