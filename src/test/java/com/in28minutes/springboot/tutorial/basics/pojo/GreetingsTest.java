@@ -25,4 +25,10 @@ public class GreetingsTest {
         when(greetings.getMessage()).thenReturn("Hello Sanket");
         Assert.assertEquals("Hello Sanket", greetings.getMessage());
     }
+
+    @Test
+    public void getLuckyNumber() {
+        when(greetings.getLuckyNumber()).thenReturn(7l);
+        Assert.assertEquals(7l, greetings.getLuckyNumber());
+    }
 }
